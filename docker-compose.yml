@@ -16,8 +16,8 @@ services:
     # environment:
     #   - MONGO_URL=mongodb://mongo:27017/dd_db
     image: parthghl00/backend:latest
-    ports:
-      - "8080:8080"
+    expose:
+      - "8080"
 
   frontend:
     # build: ./frontend
@@ -26,8 +26,8 @@ services:
     # depends_on:
     #   - backend
     image: parthghl00/frontend:latest
-    ports:
-      - "80:80"
+    expose:
+      - "80"
 
   nginx:
     image: nginx:alpine
