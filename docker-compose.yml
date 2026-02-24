@@ -17,7 +17,7 @@ services:
     #   - MONGO_URL=mongodb://mongo:27017/dd_db
     # ports:
     #   - "8080:8080"
-    image: yourdockerhub/backend:latest
+    image: parthghl00/backend:latest
 
   frontend:
     # build: ./frontend
@@ -27,7 +27,7 @@ services:
     #   - backend
     # ports:
     #   - "80:80"
-    image: yourdockerhub/frontend:latest
+    image: parthghl00/frontend:latest
 
 volumes:
   mongo-data:
