@@ -8,24 +8,26 @@ services:
       - mongo-data:/data/db
 
   backend:
-    build: ./backend
-    container_name: backend
-    restart: always
-    depends_on:
-      - mongo
-    environment:
-      - MONGO_URL=mongodb://mongo:27017/dd_db
-    ports:
-      - "8080:8080"
+    # build: ./backend
+    # container_name: backend
+    # restart: always
+    # depends_on:
+    #   - mongo
+    # environment:
+    #   - MONGO_URL=mongodb://mongo:27017/dd_db
+    # ports:
+    #   - "8080:8080"
+    image: yourdockerhub/backend:latest
 
   frontend:
-    build: ./frontend
-    container_name: frontend
-    restart: always
-    depends_on:
-      - backend
-    ports:
-      - "80:80"
+    # build: ./frontend
+    # container_name: frontend
+    # restart: always
+    # depends_on:
+    #   - backend
+    # ports:
+    #   - "80:80"
+    image: yourdockerhub/frontend:latest
 
 volumes:
   mongo-data:
