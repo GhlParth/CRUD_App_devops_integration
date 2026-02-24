@@ -31,6 +31,7 @@ jobs:
           username: ubuntu
           key: ${{ secrets.SSH_KEY }}
           script: |
+            cd ~/CRUD_App_devops_integration
             docker compose pull
             docker compose down
             docker compose up -d
